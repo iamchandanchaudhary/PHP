@@ -1,0 +1,15 @@
+<form onsubmit="return checkName()">
+    <input type="text" id="name">
+    <input type="submit">
+</form>
+
+<script>
+function checkName() {
+    let name = document.getElementById("name").value;
+    if (name.trim() === "") {
+        alert("Name cannot be empty");
+        return false;
+    }
+    return true;
+}
+</script>
