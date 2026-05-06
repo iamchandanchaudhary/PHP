@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+</head>
+
+<body>
+
+  <form name="myForm" onsubmit="return validateForm()" method="POST">
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+
+      if (name == "") {
+        alert("Name cannot be empty!");
+        return false;
+      }
+
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Enter a valid email address!");
+        return false;
+      }
+
+      return true; // Allow form submission
+    }
+  </script>
+
+</body>
+
+</html>
