@@ -4,14 +4,14 @@
 
     // Associative
     $user = [
-    'name' => 'Chandan',
-    'email' => 'c@example.com'
+        'name' => 'Chandan',
+        'email' => 'c@example.com'
     ];
 
     // Multidimensional
     $matrix = [
-    [1,2,3],
-    [4,5,6]
+        [1,2,3],
+        [4,5,6]
     ];
 
     // Empty then push
